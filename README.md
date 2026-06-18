@@ -3,6 +3,8 @@
 # merge-review
 > Skill for Cursor, Claude, Codex agents
 
+**Language / 언어:** [한국어](README.md) · [English](README.en.md)
+
 **의존·응집으로 결합된 PR 묶음을 먼저 main에 bottom-up으로 순차 머지하고, 수렴된 단일 표면에서 통합 동작을 라이브로 검토하는 Skill입니다(MERGE → REVIEW). 앞 PR이 뒤 PR 전에는 dead code라서 "통합돼야 비로소 동작이 존재"하는 기능군에 씁니다. PR별 merge commit으로 롤백 입도를 보존하고, auto-delete-head·git push 자격 같은 스택 머지 사고를 절차로 방어합니다. Cursor, Claude Code, Codex 모두 지원합니다.**
 
 PR을 항상 "한 건씩 리뷰하고 머지"하는 게 정답은 아닙니다. 인가 게이트 → 진입 플로우 → 라우트 연결처럼 **앞 단계가 뒤 단계 전에는 호출처 0인 dead code**인 스택에서는, 머지 전 PR을 아무리 들여다봐도 실제 HTTP 403/404/200이 *존재하지 않습니다*. 리뷰는 "시뮬레이션"에 머무릅니다.
